@@ -19,6 +19,12 @@
   color: white;
 }
 
+h2 {
+  font-size: 24px;
+  color: black;
+  vertical-align: middle;
+}
+
 .App-link {
   color: #61dafb;
 }
