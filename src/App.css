@@ -19,6 +19,12 @@
   color: white;
 }
 
+.cvRow {
+margin-left: auto;
+margin-right: auto;
+width: 90%;
+}
+
 h2 {
   font-size: 24px;
   color: black;
