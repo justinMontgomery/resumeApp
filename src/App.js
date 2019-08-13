@@ -185,10 +185,15 @@ export default class App extends Component {
           <span>
             <a class="App-link" href="mailto:justin.montgomery2@gmail.com">justin.montgomery2@gmail.com</a>
           </span>
-          <span>
-            <a href="https://www.linkedin.com/in/justinmmontgomery/"><i class="Icons fab fa-linkedin-in"></i></a>
-          </span>
-        </header>
+          <div>
+            <span class="Icon">
+              <a href="https://www.linkedin.com/in/justinmmontgomery/"><i class="fab fa-linkedin-in"></i></a>
+            </span>
+            <span class="Icon">
+              <a href="https://www.strava.com/athletes/18781585"><i class="fab fa-strava"></i></a>
+            </span>
+          </div>
+        </header >
         <body>
           <br />
           {this.renderHistoryList()}

@@ -7,7 +7,11 @@
   pointer-events: none;
   border-radius: 30px;
 }
-.Icons{
+.Icon{
+  color: white;
+  padding: 5px;
+}
+.Icon a{
   color: white;
 }
 .skillset .item {
