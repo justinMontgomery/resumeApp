@@ -160,19 +160,37 @@ export default class App extends Component {
   renderSkillsList() {
     return <div class="cvRow">
       <h2>Skills and Proficiencies</h2>
-      <ul class="skillset">
+      <div class="skillset">
         <li className="item">C#</li>
-        <li className="item">MSSQL</li>
         <li className="item">.NET Framework</li>
         <li className="item">.NET Core</li>
+        <li className="item">MSSQL</li>
+        <li className="item">MVC</li>
         <li className="item">WebAPI</li>
         <li className="item">Restful Services</li>
         <li className="item">Entity Framework</li>
-        <li className="item">Azure Platform</li>
+        <li className="item">Azure SQL</li>
+        <li className="item">Azure Storage</li>
         <li className="item">Azure Functions</li>
         <li className="item">React</li>
+        <li className="item">Visual Studio</li>
+        <li className="item">Visual Studio Code</li>
+        <li className="item">Rider</li>
+        <li className="item">IntelliJ</li>
+        <li className="item">TeamCity</li>
+        <li className="item">Octopus Deploy</li>
         <li className="item">Scrum</li>
-      </ul>
+      </div>
+    </div>
+  }
+
+  renderEducation() {
+    return <div class="cvRow">
+      <h2>Education</h2>
+      <dl>
+        <dt>BBA with focus in Management Information Systems and Finance</dt>
+        <dd>Ohio University - <i>2007-2011 | Athens, OH</i></dd>
+      </dl>
     </div>
   }
 
@@ -199,6 +217,8 @@ export default class App extends Component {
           {this.renderHistoryList()}
           <br />
           {this.renderSkillsList()}
+          <br />
+          {this.renderEducation()}
         </body >
       </div >
     );
