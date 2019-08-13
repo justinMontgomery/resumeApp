@@ -1,39 +1,9 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import logo from './logo.jpg';
 import './App.css';
-import Accordion from 'react-bootstrap/Accordion';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import Collapse from 'react-bootstrap/Collapse';
 import "../node_modules/@fortawesome/fontawesome-free/js/all.js";
 import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
-
-
-function JobCard(props) {
-  const [open, setOpen] = useState(false);
-  return (
-    <>
-      <Card>
-        <Card.Header onClick={() => setOpen(!open)}>
-          <button class="btn btn-link" type="button">{props.name}</button>
-        </Card.Header>
-        <Collapse in={open}>
-          <div>
-            <Card.Body>
-              <Card.Title>
-                {props.company}
-              </Card.Title>
-              <Card.Subtitle>{props.timeFrame}</Card.Subtitle>
-              <Card.Text>
-                {props.list}
-              </Card.Text>
-            </Card.Body>
-          </div>
-        </Collapse>
-      </Card>
-    </>
-  );
-}
+import JobCards from './JobCards';
 
 function Paycor() {
   return (
@@ -125,12 +95,12 @@ export default class App extends Component {
     return <div class="cvRow">
       <h2>Experience</h2>
       <div class="history">
-        <JobCard name="Senior Software Developer" timeFrame="Sept 2018 - Present" company={Paycor()} list={SSDList()}></JobCard>
-        <JobCard name="Software Developer II" timeFrame="Nov 2012 - Sept 2018" company={Paycor()} list={SD2List()}></JobCard>
-        <JobCard name="Software Developer I" timeFrame="June 2011 - Nov 2012" company={Paycor()} list={SD1List()}></JobCard>
-        <JobCard name="Quality Assurance Analyst" timeFrame="Apr 2011 - Jun 2011" company={Sundries()} list={QAAList()}></JobCard>
-        <JobCard name="Teaching Assistant" timeFrame="Nov 2010 - Jun 2011" company={OU()} list={TAList()}></JobCard>
-        <JobCard name="Intern" timeFrame="Nov 2010 - Jun 2011" company={(EdMap())} list={EdMapList()}></JobCard>
+        <JobCards name="Senior Software Developer" timeFrame="Sept 2018 - Present" company={Paycor()} list={SSDList()}></JobCards>
+        <JobCards name="Software Developer II" timeFrame="Nov 2012 - Sept 2018" company={Paycor()} list={SD2List()}></JobCards>
+        <JobCards name="Software Developer I" timeFrame="June 2011 - Nov 2012" company={Paycor()} list={SD1List()}></JobCards>
+        <JobCards name="Quality Assurance Analyst" timeFrame="Apr 2011 - Jun 2011" company={Sundries()} list={QAAList()}></JobCards>
+        <JobCards name="Teaching Assistant" timeFrame="Nov 2010 - Jun 2011" company={OU()} list={TAList()}></JobCards>
+        <JobCards name="Intern" timeFrame="Nov 2010 - Jun 2011" company={(EdMap())} list={EdMapList()}></JobCards>
       </div>
     </div >;
   }
@@ -179,8 +149,8 @@ export default class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h1>Justin Montgomery</h1>
+          <img src={logo} className="App-logo" alt="logo" />
           <span>
             <a class="App-link" href="mailto:justin.montgomery2@gmail.com">justin.montgomery2@gmail.com</a>
           </span>
@@ -205,4 +175,3 @@ export default class App extends Component {
     );
   }
 }
-
