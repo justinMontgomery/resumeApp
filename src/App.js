@@ -128,9 +128,9 @@ export default class App extends Component {
         <li className="item">TeamCity</li>
         <li className="item">Octopus Deploy</li>
         <li className="item">Scrum</li>
+        <li className="item">Git</li>
         <li className="item">TFS</li>
         <li className="item">TFS Source Control</li>
-        <li className="item">Git</li>
       </div>
     </div>
   }
