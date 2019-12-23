@@ -152,7 +152,7 @@ export default class App extends Component {
           <h1>Justin Montgomery</h1>
           <img src={logo} className="App-logo" alt="logo" />
           <span>
-            <a class="App-link" href="mailto:justin.montgomery2@gmail.com">justin.montgomery2@gmail.com</a>
+            <a class="App-link" href="mailto:justin@montgomery.run">justin@montgomery.run</a>
           </span>
           <div>
             <span class="Icon">
