@@ -96,8 +96,8 @@ export default class App extends Component {
       <h2>Experience</h2>
       <div class="history">
         <JobCards name="Senior Software Engineer" timeFrame="Sept 2018 - Present" company={Paycor()} list={SSDList()}></JobCards>
-        <JobCards name="Software Engineer II" timeFrame="Nov 2012 - Sept 2018" company={Paycor()} list={SD2List()}></JobCards>
-        <JobCards name="Software Engineer I" timeFrame="June 2011 - Nov 2012" company={Paycor()} list={SD1List()}></JobCards>
+        <JobCards name="Software Developer II" timeFrame="Nov 2012 - Sept 2018" company={Paycor()} list={SD2List()}></JobCards>
+        <JobCards name="Software Developer I" timeFrame="June 2011 - Nov 2012" company={Paycor()} list={SD1List()}></JobCards>
         <JobCards name="Quality Assurance Analyst" timeFrame="Apr 2011 - Jun 2011" company={Sundries()} list={QAAList()}></JobCards>
         <JobCards name="Teaching Assistant" timeFrame="Nov 2010 - Jun 2011" company={OU()} list={TAList()}></JobCards>
         <JobCards name="Intern" timeFrame="Nov 2010 - Jun 2011" company={(EdMap())} list={EdMapList()}></JobCards>
