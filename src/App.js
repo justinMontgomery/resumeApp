@@ -50,6 +50,7 @@ function SD2List() {
       <li>Unit tested features using MSTest and NUnit.</li>
       <li>Supported user facing applications with bug fixes and feature work while working closely with involved stakeholders.</li>
       <li>Worked with team across multiple timezones and locations.</li>
+      <li>Managed Scrum Master duties including, leading standup, retros, sprint planning, cross team dependencies, and other various responsibilities.</li>
     </ul>
   );
 }
