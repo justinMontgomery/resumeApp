@@ -30,7 +30,7 @@ function EdMap() {
 function SSDList() {
   return (
     <ul>
-      <li>Worked with newly formed team to rewrite legacy Powerbuilder/MSSQL application in .NET Core/AzureSQL.</li>
+      <li>Worked with newly formed team in Kanban environment to rewrite legacy Powerbuilder/MSSQL application in .NET Core/AzureSQL.</li>
       <li>App managed financial transactions between Paycor, clients, employees, and various tax agencies.</li>
       <li>Main application utilized primarily Azure based assets. Including Functions, Storage, SQL.</li>
       <li>Extensive testing utilizing NUnit to ensure output of rewrite matched output of legacy app.</li>
@@ -133,7 +133,7 @@ export default class App extends Component {
         <li className="item">Rider</li>
         <li className="item">TeamCity</li>
         <li className="item">Octopus Deploy</li>
-        <h5>Methodlogies</h5>
+        <h5>Methodologies</h5>
         <li className="item">Scrum</li>
         <li className="item">Kanban</li>
         <li className="item">Waterfall</li>
