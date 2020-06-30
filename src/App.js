@@ -110,6 +110,7 @@ export default class App extends Component {
     return <div class="cvRow">
       <h2>Skills and Proficiencies</h2>
       <div class="skillset">
+        <h5>Technologies</h5>
         <li className="item">C#</li>
         <li className="item">.NET Framework</li>
         <li className="item">.NET Core</li>
@@ -122,16 +123,19 @@ export default class App extends Component {
         <li className="item">Azure Storage</li>
         <li className="item">Azure Functions</li>
         <li className="item">React</li>
+        <h5>Tools</h5>
         <li className="item">Visual Studio</li>
         <li className="item">Visual Studio Code</li>
-        <li className="item">Rider</li>
-        <li className="item">IntelliJ</li>
-        <li className="item">TeamCity</li>
-        <li className="item">Octopus Deploy</li>
-        <li className="item">Scrum</li>
         <li className="item">Git</li>
         <li className="item">TFS</li>
         <li className="item">TFS Source Control</li>
+        <li className="item">Rider</li>
+        <li className="item">TeamCity</li>
+        <li className="item">Octopus Deploy</li>
+        <h5>Methodlogies</h5>
+        <li className="item">Scrum</li>
+        <li className="item">Kanban</li>
+        <li className="item">Waterfall</li>
       </div>
     </div>
   }
