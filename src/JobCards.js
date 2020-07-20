@@ -9,7 +9,7 @@ function JobCards(props) {
         <>
             <Card>
                 <Card.Header onClick={() => setOpen(!open)}>
-                    <button class="btn btn-link" type="button">{props.name}</button>
+                    <button className="btn btn-link" type="button">{props.name}</button>
                 </Card.Header>
                 <Collapse in={open}>
                     <div>

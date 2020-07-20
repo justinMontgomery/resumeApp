@@ -93,10 +93,18 @@ function EdMapList() {
   );
 }
 export default class App extends Component {
+
+  componentDidMount() {
+    const script = document.createElement("script");
+    script.src = "//cdn.youracclaim.com/assets/utilities/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }
+
   renderHistoryList() {
-    return <div class="cvRow">
+    return <div className="cvRow">
       <h2>Experience</h2>
-      <div class="history">
+      <div className="history">
         <JobCards name="Senior Software Engineer" timeFrame="Sept 2018 - Present" company={Paycor()} list={SSDList()}></JobCards>
         <JobCards name="Software Developer II" timeFrame="Nov 2012 - Sept 2018" company={Paycor()} list={SD2List()}></JobCards>
         <JobCards name="Software Developer I" timeFrame="June 2011 - Nov 2012" company={Paycor()} list={SD1List()}></JobCards>
@@ -108,9 +116,9 @@ export default class App extends Component {
   }
 
   renderSkillsList() {
-    return <div class="cvRow">
+    return <div className="cvRow">
       <h2>Skills and Proficiencies</h2>
-      <div class="skillset">
+      <div className="skillset">
         <h5>Technologies</h5>
         <li className="item">C#</li>
         <li className="item">.NET Framework</li>
@@ -142,12 +150,19 @@ export default class App extends Component {
   }
 
   renderEducation() {
-    return <div class="cvRow">
+    return <div className="cvRow">
       <h2>Education</h2>
       <dl>
         <dt>BBA with focus in Management Information Systems and Finance</dt>
         <dd>Ohio University - <i>2007-2011 | Athens, OH</i></dd>
       </dl>
+    </div>
+  }
+
+  renderCerts() {
+    return <div className="cvRow">
+      <h2>Certifications</h2>
+      <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="eb715d79-8933-4a5c-bf3a-8b1d6dbb7f6e" data-share-badge-host="https://www.youracclaim.com"></div>
     </div>
   }
 
@@ -158,14 +173,14 @@ export default class App extends Component {
           <h1>Justin Montgomery</h1>
           <img src={logo} className="App-logo" alt="logo" />
           <span>
-            <a class="App-link" href="mailto:justin@montgomery.run">justin@montgomery.run</a>
+            <a className="App-link" href="mailto:justin@montgomery.run">justin@montgomery.run</a>
           </span>
           <div>
-            <span class="Icon">
-              <a href="https://www.linkedin.com/in/justinmmontgomery/"><i class="fab fa-linkedin-in"></i></a>
+            <span className="Icon">
+              <a href="https://www.linkedin.com/in/justinmmontgomery/"><i className="fab fa-linkedin-in"></i></a>
             </span>
-            <span class="Icon">
-              <a href="https://www.strava.com/athletes/18781585"><i class="fab fa-strava"></i></a>
+            <span className="Icon">
+              <a href="https://www.strava.com/athletes/18781585"><i className="fab fa-strava"></i></a>
             </span>
           </div>
         </header >
@@ -176,6 +191,8 @@ export default class App extends Component {
           {this.renderSkillsList()}
           <br />
           {this.renderEducation()}
+          <br />
+          {this.renderCerts()}
         </body >
       </div >
     );
