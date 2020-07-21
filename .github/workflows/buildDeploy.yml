@@ -25,8 +25,7 @@ jobs:
       with:
         node-version: '12'
     - run: npm install
-    - run: npm run build    
-    - run: echo Hello, world!
+    - run: npm run build
     
     - name: Deploy website
       uses: tibor19/static-website-deploy@v1
