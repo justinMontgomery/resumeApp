@@ -23,6 +23,7 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    
     - name: Use Node.js
       uses: actions/setup-node@v1
       with:
@@ -30,3 +31,10 @@ jobs:
     - run: npm install
     - run: npm run build    
     - run: echo Hello, world!
+    
+    - name: Deploy website
+    - uses: tibor19/static-website-deploy@v1
+      with:
+        enabled-static-website: 'true'
+        folder: './build'
+        connection-string: ${{ secrets.CONNECTION_STRING }}
