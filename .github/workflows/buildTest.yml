@@ -5,10 +5,6 @@ name: Build
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  push:
-    branches: 
-      - master
-      - messingWithGithubActions
   pull_request:
     branches: [ master ]
 
@@ -31,10 +27,3 @@ jobs:
     - run: npm install
     - run: npm run build    
     - run: echo Hello, world!
-    
-    - name: Deploy website
-      uses: tibor19/static-website-deploy@v1
-      with:
-        enabled-static-website: 'true'
-        folder: './build'
-        connection-string: ${{ secrets.AZURE_STATIC_SITE_CONNECTION_STRING }}
