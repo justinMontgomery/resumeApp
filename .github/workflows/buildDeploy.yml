@@ -27,8 +27,8 @@ jobs:
     - run: npm install
     - run: npm run build
     - run: npm test
-    env:
-      CI: true
+      env:
+        CI: true
     
     - name: Deploy website
       uses: tibor19/static-website-deploy@v1
