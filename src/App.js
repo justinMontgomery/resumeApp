@@ -142,6 +142,9 @@ export default class App extends Component {
         <li className="item">Rider</li>
         <li className="item">TeamCity</li>
         <li className="item">Octopus Deploy</li>
+        <li className="item">Application Insights</li>
+        <li className="item">NewRelic</li>
+        <li className="item">Azure</li>
         <h5>Methodologies</h5>
         <li className="item">Scrum</li>
         <li className="item">Kanban</li>
