@@ -136,6 +136,7 @@ export default class App extends Component {
         <li className="item">Visual Studio</li>
         <li className="item">Visual Studio Code</li>
         <li className="item">Git</li>
+        <li className="item">GitHub</li>
         <li className="item">TFS</li>
         <li className="item">TFS Source Control</li>
         <li className="item">Rider</li>
