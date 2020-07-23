@@ -18,9 +18,7 @@ function JobCards(props) {
                                 {props.company}
                             </Card.Title>
                             <Card.Subtitle>{props.timeFrame}</Card.Subtitle>
-                            <Card.Text>
-                                {props.list}
-                            </Card.Text>
+                            {props.list}
                         </Card.Body>
                     </div>
                 </Collapse>

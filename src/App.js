@@ -102,7 +102,7 @@ export default class App extends Component {
   }
 
   renderHistoryList() {
-    return <div className="cvRow">
+    return <div className="resumeRow">
       <h2>Experience</h2>
       <div className="history">
         <JobCards name="Senior Software Engineer" timeFrame="Sept 2018 - Present" company={Paycor()} list={SSDList()}></JobCards>
@@ -116,7 +116,7 @@ export default class App extends Component {
   }
 
   renderSkillsList() {
-    return <div className="cvRow">
+    return <div className="resumeRow">
       <h2>Skills and Proficiencies</h2>
       <div className="skillset">
         <h5>Technologies</h5>
@@ -154,7 +154,7 @@ export default class App extends Component {
   }
 
   renderEducation() {
-    return <div className="cvRow">
+    return <div className="resumeRow">
       <h2>Education</h2>
       <dl>
         <dt>BBA with focus in Management Information Systems and Finance</dt>
@@ -164,7 +164,7 @@ export default class App extends Component {
   }
 
   renderCerts() {
-    return <div className="cvRow">
+    return <div className="resumeRow">
       <h2>Certifications</h2>
       <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="eb715d79-8933-4a5c-bf3a-8b1d6dbb7f6e" data-share-badge-host="https://www.youracclaim.com"></div>
     </div>
@@ -188,16 +188,14 @@ export default class App extends Component {
             </span>
           </div>
         </header >
-        <body>
-          <br />
-          {this.renderHistoryList()}
-          <br />
-          {this.renderSkillsList()}
-          <br />
-          {this.renderEducation()}
-          <br />
-          {this.renderCerts()}
-        </body >
+        <br />
+        {this.renderHistoryList()}
+        <br />
+        {this.renderSkillsList()}
+        <br />
+        {this.renderEducation()}
+        <br />
+        {this.renderCerts()}
       </div >
     );
   }
