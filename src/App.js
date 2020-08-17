@@ -128,6 +128,7 @@ export default class App extends Component {
         <li className="item">WebAPI</li>
         <li className="item">Restful Services</li>
         <li className="item">Entity Framework</li>
+        <li className="item">EF Core</li>
         <li className="item">Azure SQL</li>
         <li className="item">Azure Storage</li>
         <li className="item">Azure Functions</li>
