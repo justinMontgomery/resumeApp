@@ -7,33 +7,33 @@
   pointer-events: none;
   border-radius: 30px;
 }
-.Icon{
+.Icon {
   color: white;
   padding: 5px;
 }
-.Icon a{
+.Icon a {
   color: white;
 }
 .skillset .item {
   margin-bottom: 15px;
   overflow: hidden;
   border: 0px solid silver;
--o-transition: all 0.07s;
-transition: all 0.07s;
-display: inline-block;
-margin: 5px;
-    margin-bottom: 5px;
-background-color: #2d7788;
-border-radius: 2px;
-text-decoration: none;
-padding: 3px 6px;
-font-size: 15px;
-font-weight: 500;
-line-height: 25px;
-color: #ffffff;
-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-white-space: nowrap;
-vertical-align: baseline;
+  -o-transition: all 0.07s;
+  transition: all 0.07s;
+  display: inline-block;
+  margin: 5px;
+  margin-bottom: 5px;
+  background-color: #2d7788;
+  border-radius: 2px;
+  text-decoration: none;
+  padding: 3px 6px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  vertical-align: baseline;
 }
 
 .App-header {
@@ -48,10 +48,10 @@ vertical-align: baseline;
 }
 
 .resumeRow {
-margin-left: auto;
-margin-right: auto;
-width: 90%;
-text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  text-align: left;
 }
 
 h2 {
