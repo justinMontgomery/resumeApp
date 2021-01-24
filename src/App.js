@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logo from "./logo.jpg";
+import CAAS from "./logo";
 import "./App.css";
 import "../node_modules/@fortawesome/fontawesome-free/js/all.js";
 import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
@@ -269,7 +270,7 @@ export default class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1>Justin Montgomery</h1>
-          <img src={logo} className="App-logo" alt="logo" />
+          <CAAS />
           <span>
             <a className="App-link" href="mailto:justin@montgomery.run">
               justin@montgomery.run
