@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "./logo.jpg";
 import { Async } from 'react-async';
 
-function CAAS(props) {
+function CatAsAService(props) {
 
   const [click, setClicked] = useState(false);
   const loadUsers = () =>
@@ -36,4 +36,4 @@ function CAAS(props) {
   }
 }
 
-export default CAAS;
+export default CatAsAService;
