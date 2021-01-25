@@ -1,46 +1,39 @@
 import React, { useState } from "react";
 import logo from "./logo.jpg";
-// import React, { useState, useEffect } from "react";
-// import ReactDOM from "react-dom";
-
-
+import { Async } from 'react-async';
 
 function CAAS(props) {
 
-  async function fetchCat() {
-    setLoading(false);
-    const response = await fetch('https://cataas.com/cat?json=true');
-    const catImg = await response.json();
-    console.log(catImg);
-    return catImg;
-  }
-
-
   const [click, setClicked] = useState(false);
-  const [cat, setCat] = useState([]);
-  const [isLoading, setLoading] = useState(true);
-
-
+  const loadUsers = () =>
+    fetch("https://cataas.com/cat?json=true")
+      .then(res => (res.ok ? res : Promise.reject(res)))
+      .then(res => res.json())
   if (click) {
-    if (isLoading) {
-      fetchCat().then(x => {
-        setCat(x);
-      });
-      return <img src={logo} className="App-logo" alt="logo" />
-    }
-    else {
-      let url = `https://cataas.com/${cat.url}`;
-      return <div onClick={() => setClicked(!click)}> <img src={url} className="App-logo" alt="" /></div>
-    }
-
-
+    return (
+      <div>
+        <Async promiseFn={loadUsers}>
+          <Async.Loading><img src={logo} className="App-logo" alt="logo" /></Async.Loading>
+          <Async.Fulfilled>
+            {data => {
+              let url = `https://cataas.com/${data.url}`;
+              return (
+                <div>
+                  <div onClick={() => setClicked(!click)}> <img src={url} className="App-logo" alt="catLogo" /></div>
+                </div>
+              )
+            }}
+          </Async.Fulfilled>
+          <Async.Rejected>
+            {error => `Something went wrong: ${error.message}`}
+          </Async.Rejected>
+        </Async>
+      </div>
+    );
   }
-  else
-    return <div onClick={() => { setClicked(!click); setLoading(true); }}> <img src={logo} className="App-logo" alt="logo" /></div>
-
-
+  else {
+    return <div onClick={() => { setClicked(!click) }}> <img src={logo} className="App-logo" alt="logo" /></div>
+  }
 }
-
-
 
 export default CAAS;
