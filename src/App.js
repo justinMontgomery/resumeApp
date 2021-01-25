@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.jpg";
 import CAAS from "./logo";
 import "./App.css";
 import "../node_modules/@fortawesome/fontawesome-free/js/all.js";
