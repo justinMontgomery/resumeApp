@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "./logo.jpg";
 import { Async } from 'react-async';
 
-function CatAsAService(props) {
+function Logo(props) {
 
   const [click, setClicked] = useState(false);
   const loadUsers = () =>
@@ -36,4 +36,4 @@ function CatAsAService(props) {
   }
 }
 
-export default CatAsAService;
+export default Logo;
