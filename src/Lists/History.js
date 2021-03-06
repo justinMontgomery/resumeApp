@@ -31,7 +31,7 @@ function SSDList() {
         </li>
             <li>
                 Main application utilized primarily Azure based assets. Including
-                Functions, Storage, SQL.
+                Functions, AppServices, Storage, SQL, and others.
         </li>
             <li>
                 Extensive testing utilizing NUnit to ensure output of rewrite matched
@@ -46,6 +46,8 @@ function SSDList() {
                 Interfaced with other legacy systems to ensure hooks which legacy app
                 calls were present in new application.
         </li>
+            <li>Being one of the first major projects using primarily based Azure assets in the orgainization, helped lead some of the best practices for future projects on the team and across other teams.</li>
+            <li>Worked on a number of existing and greenfield Azure based apps utilizing the knowledge and experience gained from this project.</li>
         </ul>
     );
 }
