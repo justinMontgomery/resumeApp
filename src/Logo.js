@@ -29,7 +29,8 @@ function Logo(props) {
             }}
           </Async.Fulfilled>
           <Async.Rejected>
-            {(error) => `Something went wrong: ${error.message}`}
+            <img src={logo} className="App-logo" alt="logo" />
+            {(error) => console.log(`Something went wrong: ${error.message}`)}
           </Async.Rejected>
         </Async>
       </div>
