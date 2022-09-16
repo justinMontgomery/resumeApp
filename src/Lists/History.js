@@ -48,7 +48,7 @@ function SSDList() {
       </li>
       <li>
         Being one of the first major projects using primarily based Azure assets
-        in the orgainization, helped lead some of the best practices for future
+        in the organization, helped lead some of the best practices for future
         projects on the team and across other teams.
       </li>
       <li>
