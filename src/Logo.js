@@ -17,7 +17,7 @@ function Logo(props) {
           </Async.Loading>
           <Async.Fulfilled>
             {(data) => {
-              let url = `https://cataas.com/${data.url}`;
+              let url = `https://cataas.com/cat/${data._id}`;
               return (
                 <div>
                   <div onClick={() => setClicked(!click)}>
