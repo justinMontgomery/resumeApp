@@ -1,23 +1,25 @@
-import React, { useState } from "react";
-import logo from "./logo.jpg";
+import logo from './assets/logo.jpg'
+import { useState } from "react";
 import { Async } from "react-async";
 
-function Logo(props) {
+export function Logo() {
+
   const [click, setClicked] = useState(false);
-  const loadUsers = () =>
+  const loadCatPic = () =>
     fetch("https://cataas.com/cat?json=true")
       .then((res) => (res.ok ? res : Promise.reject(res)))
       .then((res) => res.json());
+
   if (click) {
     return (
       <div>
-        <Async promiseFn={loadUsers}>
+        <Async promiseFn={loadCatPic}>
           <Async.Loading>
             <img src={logo} className="App-logo" alt="logo" />
           </Async.Loading>
           <Async.Fulfilled>
-            {(data) => {
-              let url = `https://cataas.com/cat/${data._id}`;
+            {(data: CatResponse) => {
+              const url = `https://cataas.com/cat/${data._id}`;
               return (
                 <div>
                   <div onClick={() => setClicked(!click)}>
@@ -30,7 +32,6 @@ function Logo(props) {
           </Async.Fulfilled>
           <Async.Rejected>
             <img src={logo} className="App-logo" alt="logo" />
-            {(error) => console.log(`Something went wrong: ${error.message}`)}
           </Async.Rejected>
         </Async>
       </div>
@@ -49,4 +50,6 @@ function Logo(props) {
   }
 }
 
-export default Logo;
+interface CatResponse {
+  _id: string;
+}

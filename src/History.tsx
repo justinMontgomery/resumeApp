@@ -1,6 +1,5 @@
-import React from "react";
-import "../App.css";
-import JobCards from "../JobCards";
+import "./App.css"
+import { JobCards } from "./JobCards";
 
 function Paycor() {
   return <a href="https://www.paycor.com">Paycor</a>;
@@ -17,6 +16,7 @@ function OU() {
 function EdMap() {
   return "EdMap";
 }
+
 
 function SSDList() {
   return (
@@ -148,7 +148,8 @@ function EdMapList() {
   );
 }
 
-function renderHistoryList() {
+
+export function History() {
   return (
     <div className="resumeRow">
       <h2>Experience</h2>
@@ -193,5 +194,3 @@ function renderHistoryList() {
     </div>
   );
 }
-
-export default renderHistoryList;

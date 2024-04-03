@@ -1,21 +1,13 @@
-import React, { Component } from "react";
-import Logo from "./Logo";
-import History from "./Lists/History";
-import Skills from "./Lists/Skills";
-import Education from "./Lists/EducationCerts";
-import "./App.css";
-import "../node_modules/@fortawesome/fontawesome-free/js/all.js";
-import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
-export default class App extends Component {
-  componentDidMount() {
-    const script = document.createElement("script");
-    script.src = "//cdn.youracclaim.com/assets/utilities/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-  }
-
-  render() {
-    return (
+import './App.css'
+import { Logo } from './Logo'
+import { History } from './History';
+import { Skills } from './Skills';
+import { Education } from './Education';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import '@fortawesome/fontawesome-free/js/all.js';
+function App() {
+  return (
+    <>
       <div className="App">
         <header className="App-header">
           <h1>Justin Montgomery</h1>
@@ -45,6 +37,8 @@ export default class App extends Component {
         <br />
         <Education />
       </div>
-    );
-  }
+    </>
+  )
 }
+
+export default App

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Card from "react-bootstrap/Card";
 import Collapse from "react-bootstrap/Collapse";
 
-function JobCards(props) {
+export function JobCards(props: JobCardProps) {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -25,5 +25,9 @@ function JobCards(props) {
     </>
   );
 }
-
-export default JobCards;
+interface JobCardProps {
+  name: string;
+  company: JSX.Element | string;
+  timeFrame: string;
+  list: JSX.Element;
+}
