@@ -1,4 +1,4 @@
-import App from './App';
+import App from '../App';
 import { test } from 'bun:test';
 import { createRoot } from 'react-dom/client';
 

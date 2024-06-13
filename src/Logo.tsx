@@ -1,12 +1,11 @@
-import logo from './assets/logo.jpg'
-import { useState } from "react";
-import { Async } from "react-async";
+import logo from './assets/logo.jpg';
+import { useState } from 'react';
+import { Async } from 'react-async';
 
 export function Logo() {
-
   const [click, setClicked] = useState(false);
   const loadCatPic = () =>
-    fetch("https://cataas.com/cat?json=true")
+    fetch('https://cataas.com/cat?json=true')
       .then((res) => (res.ok ? res : Promise.reject(res)))
       .then((res) => res.json());
 
@@ -23,7 +22,7 @@ export function Logo() {
               return (
                 <div>
                   <div onClick={() => setClicked(!click)}>
-                    {" "}
+                    {' '}
                     <img src={url} className="App-logo" alt="catLogo" />
                   </div>
                 </div>
@@ -41,9 +40,8 @@ export function Logo() {
       <div
         onClick={() => {
           setClicked(!click);
-        }}
-      >
-        {" "}
+        }}>
+        {' '}
         <img src={logo} className="App-logo" alt="logo" />
       </div>
     );

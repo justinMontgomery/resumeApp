@@ -1,6 +1,6 @@
-import { useState } from "react";
-import Card from "react-bootstrap/Card";
-import Collapse from "react-bootstrap/Collapse";
+import { useState } from 'react';
+import Card from 'react-bootstrap/Card';
+import Collapse from 'react-bootstrap/Collapse';
 
 export function JobCards(props: JobCardProps) {
   const [open, setOpen] = useState(false);

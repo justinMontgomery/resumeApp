@@ -1,5 +1,5 @@
-import './App.css'
-import { Logo } from './Logo'
+import './App.css';
+import { Logo } from './Logo';
 import { History } from './History';
 import { Skills } from './Skills';
 import { Education } from './Education';
@@ -38,7 +38,7 @@ function App() {
         <Education />
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
