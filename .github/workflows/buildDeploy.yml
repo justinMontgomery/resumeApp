@@ -6,7 +6,7 @@ name: Deploy on push to master
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -17,40 +17,39 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v4
-    
-    - name: Use Bun
-      uses: oven-sh/setup-bun@v1
-      with:
-        bun-version: latest
-    - run: bun install
-    - run: bun run build
-    - run: bun test
-      env:
-        CI: true
-    
-    - name: Deploy website
-      uses: tibor19/static-website-deploy@v1
-      with:
-        enabled-static-website: 'true'
-        folder: './dist'
-        connection-string: ${{ secrets.AZURE_STATIC_SITE_CONNECTION_STRING }}
-    
-    # If this guy expires
-    # az login
-    # az ad sp create-for-rbac --name "GitHubResumeApp" --role contributor --scopes /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName} --sdk-auth
-    - name: Azure service principal login
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-        
-    # Do other steps
-        
-    - name: Purge CDN
-      run:
-        az cdn endpoint purge -n ${{ secrets.AZURE_CDN_ENDPOINT }} --profile-name ${{ secrets.AZURE_CDN_PROFILE_NAME }} --content-paths "/*" --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} --no-wait
-        
-    - name: Azure service principal logout
-      run: |
-        az logout
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      - name: Use Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      - run: bun install
+      - run: bun run build
+      - run: bun test
+        env:
+          CI: true
+
+      - name: Azure deploy action
+        uses: tibor19/static-website-deploy@v2
+        with:
+          enabled-static-website: 'true'
+          folder: './dist'
+          connection-string: ${{ secrets.AZURE_STATIC_SITE_CONNECTION_STRING }}
+
+      # If this guy expires
+      # az login
+      # az ad sp create-for-rbac --name "GitHubResumeApp" --role contributor --scopes /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName} --sdk-auth
+      - name: Azure service principal login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # Do other steps
+
+      - name: Purge CDN
+        run: az cdn endpoint purge -n ${{ secrets.AZURE_CDN_ENDPOINT }} --profile-name ${{ secrets.AZURE_CDN_PROFILE_NAME }} --content-paths "/*" --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} --no-wait
+
+      - name: Azure service principal logout
+        run: |
+          az logout
