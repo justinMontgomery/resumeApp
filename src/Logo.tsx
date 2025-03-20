@@ -18,7 +18,7 @@ export function Logo() {
           </Async.Loading>
           <Async.Fulfilled>
             {(data: CatResponse) => {
-              const url = `https://cataas.com/cat/${data._id}`;
+              const url = `${data.url}`;
               return (
                 <div>
                   <div onClick={() => setClicked(!click)}>
@@ -49,5 +49,6 @@ export function Logo() {
 }
 
 interface CatResponse {
-  _id: string;
+  id: string;
+  url: string;
 }
