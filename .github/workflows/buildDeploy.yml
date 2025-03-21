@@ -46,7 +46,9 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       # Do other steps
-
+      #ENDPOINT - XXXXXX.azureweb.net, the xxxxx part
+      #PROFILENAME - cdn/resource name
+      #RESOURCE_GROUP - resource group name
       - name: Purge CDN
         run: az cdn endpoint purge -n ${{ secrets.AZURE_CDN_ENDPOINT }} --profile-name ${{ secrets.AZURE_CDN_PROFILE_NAME }} --content-paths "/*" --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} --no-wait
 
